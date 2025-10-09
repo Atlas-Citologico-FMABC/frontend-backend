@@ -5,6 +5,8 @@ import 'package:atlas_citologico_fmabc/screens/login_page.dart';
 import 'package:atlas_citologico_fmabc/widgets/navbar.dart';
 import 'package:flutter/material.dart';
 
+enum PageType { home, diretorios, galeria, login }
+
 final Color darkBlue = Color(0xff002C53);
 const double navHeight = 100;
 
@@ -20,16 +22,23 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-	int selectedIndex = 0;
-	final List<Widget> pages = const [
-		HomePage(navHeight: navHeight),
-		DiretoriosPage(),
-		GaleriaPage(),
-		LoginPage(),
-	];
+	PageType selectedPage = PageType.home;
 
-	void onTapTab(int index) {
-		setState(() => selectedIndex = index);
+	Widget getPage(PageType page) {
+		switch(page) {
+			case PageType.home:
+				return HomePage(navHeight: navHeight);
+			case PageType.diretorios:
+				return DiretoriosPage();
+			case PageType.galeria:
+				return GaleriaPage();
+			case PageType.login:
+				return LoginPage();
+		}
+	}
+
+	void onTapTab(PageType page) {
+		setState(() => selectedPage = page);
 	}
 
 	@override
@@ -38,8 +47,9 @@ class _MainPageState extends State<MainPage> {
 			debugShowCheckedModeBanner: false,
       title: 'Atlas de Citologia',
 			home: Scaffold(
-				appBar: NavBar(height: navHeight, selectedIndex: selectedIndex, onTapTab: onTapTab),
-				body: pages[selectedIndex],
+				appBar: NavBar(height: navHeight, selectedPage: selectedPage, onTapTab: onTapTab),
+				body: getPage(selectedPage),
+				// body: pages[selectedPage.index],
 				backgroundColor: darkBlue,
 			),
 		);
