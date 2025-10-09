@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class GaleriaPage extends StatelessWidget {
-	const GaleriaPage({super.key});
+class GaleriaTab extends StatelessWidget {
+	const GaleriaTab({super.key});
 
 	@override
 	Widget build(BuildContext context) {

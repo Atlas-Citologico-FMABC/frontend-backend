@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 final Color darkBlue = Color(0xff002C53);
 
-class HomePage extends StatelessWidget {
+class HomeTab extends StatelessWidget {
   final double navHeight;
-  const HomePage({super.key, required this.navHeight});
+  const HomeTab({super.key, required this.navHeight});
 
   @override
   Widget build(BuildContext context) {

@@ -4,8 +4,8 @@ import 'package:atlas_citologico_fmabc/main.dart';
 
 PreferredSizeWidget NavBar({
   required double height,
-  required PageType selectedPage,
-  required Function(PageType) onTapTab,
+  required TabType selectedTab,
+  required Function(TabType) onTapTab,
 }) {
   return PreferredSize(
     preferredSize: Size.fromHeight(height),
@@ -22,23 +22,23 @@ PreferredSizeWidget NavBar({
         actions: <Widget>[
           Button(
             label: 'Home',
-            isSelected: selectedPage == PageType.home,
-            onTap: () => onTapTab(PageType.home),
+            isSelected: selectedTab == TabType.home,
+            onTap: () => onTapTab(TabType.home),
           ),
           Button(
             label: 'Diretórios',
-            isSelected: selectedPage == PageType.diretorios,
-            onTap: () => onTapTab(PageType.diretorios),
+            isSelected: selectedTab == TabType.diretorios,
+            onTap: () => onTapTab(TabType.diretorios),
           ),
           Button(
             label: 'Galeria',
-            isSelected: selectedPage == PageType.galeria,
-            onTap: () => onTapTab(PageType.galeria),
+            isSelected: selectedTab == TabType.galeria,
+            onTap: () => onTapTab(TabType.galeria),
           ),
           Button(
             label: 'Login',
-            isSelected: selectedPage == PageType.login,
-            onTap: () => onTapTab(PageType.login),
+            isSelected: selectedTab == TabType.login,
+            onTap: () => onTapTab(TabType.login),
           ),
         ],
       ),
