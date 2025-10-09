@@ -1,13 +1,13 @@
 import 'package:atlas_citologico_fmabc/widgets/button.dart';
 import 'package:flutter/material.dart';
 
-PreferredSizeWidget NavBar({required int selectedIndex, required Function(int) onTapTab}) {
+PreferredSizeWidget NavBar({required double height, required int selectedIndex, required Function(int) onTapTab}) {
 	final List<String> labels = ['Home', 'Diretórios', 'Galeria', 'Login'];
 
 	return PreferredSize(
-		preferredSize: Size.fromHeight(100),
+		preferredSize: Size.fromHeight(height),
 		child: Padding(
-			padding: const EdgeInsets.all(10),
+			padding: const EdgeInsets.only(top: 10, right: 10, left: 10),
 			child: AppBar(
 				titleSpacing: 30,
 				shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
@@ -15,7 +15,7 @@ PreferredSizeWidget NavBar({required int selectedIndex, required Function(int) o
 					padding: EdgeInsets.symmetric(vertical: 10),
 					child: Image.asset('assets/images/fmabc.png', height: 50),
 				),
-				toolbarHeight: 100,
+				toolbarHeight: height,
 				actions: <Widget>[
 					for (int i = 0; i < labels.length; i++) 
 						Button(
