@@ -2,6 +2,7 @@ import 'package:atlas_citologico_fmabc/widgets/diretorio_box.dart';
 import 'package:flutter/material.dart';
 
 final Color darkBlue = Color(0xff002C53);
+final Color lightGray = Color(0xffEBEBEB);
 
 class HomeTab extends StatelessWidget {
   final double navHeight;
@@ -43,7 +44,7 @@ class HomeTab extends StatelessWidget {
 							minHeight: MediaQuery.of(context).size.height - 383, // -383 just for tests
 						),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: lightGray,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.elliptical(700, 70),
                 topRight: Radius.elliptical(700, 70),

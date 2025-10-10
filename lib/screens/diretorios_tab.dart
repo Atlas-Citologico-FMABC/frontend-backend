@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
 import '../widgets/diretorio_box.dart';
+
+final Color lightGray = Color(0xffEBEBEB);
 
 class DiretoriosTab extends StatelessWidget {
   const DiretoriosTab({super.key});
@@ -36,7 +37,7 @@ class DiretoriosTab extends StatelessWidget {
 						),
             width: double.infinity,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: lightGray,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.elliptical(700, 70),
                 topRight: Radius.elliptical(700, 70),
