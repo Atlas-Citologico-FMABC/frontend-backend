@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import '../widgets/galeria_box.dart';
 
-import '../widgets/diretorio_box.dart';
+final Color lightGray = Color(0xffEBEBEB);
 
 class GaleriaTab extends StatelessWidget {
   const GaleriaTab({super.key});
@@ -36,7 +37,7 @@ class GaleriaTab extends StatelessWidget {
             ),
             width: double.infinity,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: lightGray,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.elliptical(700, 70),
                 topRight: Radius.elliptical(700, 70),
@@ -50,24 +51,20 @@ class GaleriaTab extends StatelessWidget {
                   SizedBox(height: 20),
                   Wrap(
                     spacing: 50,
-                    runSpacing: 30,
+                    runSpacing: 50,
                     children: <Widget>[
-                      DiretorioBox(title: 'Diretório 1'),
-                      DiretorioBox(title: 'Diretório 2'),
-                      DiretorioBox(title: 'Diretório 3'),
-                      DiretorioBox(title: 'Diretório 4'),
-                      DiretorioBox(title: 'Diretório 5'),
-                      DiretorioBox(title: 'Diretório 6'),
-                      DiretorioBox(title: 'Diretório 7'),
-                      DiretorioBox(title: 'Diretório 8'),
-                      DiretorioBox(title: 'Diretório 9'),
-                      DiretorioBox(title: 'Diretório 10'),
-                      DiretorioBox(title: 'Diretório 11'),
-                      DiretorioBox(title: 'Diretório 12'),
-                      DiretorioBox(title: 'Diretório 13'),
-                      DiretorioBox(title: 'Diretório 14'),
-                      DiretorioBox(title: 'Diretório 15'),
-                      DiretorioBox(title: 'Diretório 16'),
+											GaleriaBox(title: 'Image 1'),
+											GaleriaBox(title: 'Image 2'),
+											GaleriaBox(title: 'Image 3'),
+											GaleriaBox(title: 'Image 4'),
+											GaleriaBox(title: 'Image 5'),
+											GaleriaBox(title: 'Image 6'),
+											GaleriaBox(title: 'Image 7'),
+											GaleriaBox(title: 'Image 8'),
+											GaleriaBox(title: 'Image 9'),
+											GaleriaBox(title: 'Image 10'),
+											GaleriaBox(title: 'Image 11'),
+											GaleriaBox(title: 'Image 12'),
                     ],
                   ),
                 ],
