@@ -53,11 +53,14 @@ class HomeTab extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 70, horizontal: 80),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
-                    'Diretórios mais usados:',
-                    style: TextStyle(fontSize: 30),
+                  Align(
+										alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Diretórios mais usados:',
+                      style: TextStyle(fontSize: 30),
+                    ),
                   ),
                   SizedBox(height: 20),
                   Wrap(
