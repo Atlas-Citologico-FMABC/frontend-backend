@@ -30,7 +30,7 @@ class HomeTab extends StatelessWidget {
                 Divider(color: Colors.white),
                 SizedBox(height: 100),
                 Text(
-                  '<descrição do sistema',
+                  '<descrição do sistema>',
                   style: TextStyle(color: Colors.white, fontSize: 30),
                   textAlign: TextAlign.center,
                 ),
@@ -39,7 +39,9 @@ class HomeTab extends StatelessWidget {
           ),
           Container(
             width: double.infinity,
-            height: MediaQuery.of(context).size.height,
+						constraints: BoxConstraints(
+							minHeight: MediaQuery.of(context).size.height - 383, // -383 just for tests
+						),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
@@ -48,7 +50,7 @@ class HomeTab extends StatelessWidget {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.only(top: 70, right: 80, left: 80),
+              padding: const EdgeInsets.symmetric(vertical: 70, horizontal: 80),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -61,10 +63,10 @@ class HomeTab extends StatelessWidget {
                     spacing: 50,
                     runSpacing: 30,
                     children: <Widget>[
-                      DiretorioBox(title: 'Diretório 1'),
-                      DiretorioBox(title: 'Diretório 2'),
-                      DiretorioBox(title: 'Diretório 3'),
-                      DiretorioBox(title: 'Diretório 4'),
+                      DiretorioBox(title: 'Diretório 1', borderWidth: 5, borderColor: Colors.green),
+                      DiretorioBox(title: 'Diretório 2', borderWidth: 5, borderColor: Colors.green),
+                      DiretorioBox(title: 'Diretório 3', borderWidth: 5, borderColor: Colors.green),
+                      DiretorioBox(title: 'Diretório 4', borderWidth: 5, borderColor: Colors.green),
                     ],
                   ),
                 ],
