@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 final Color darkBlue = Color(0xff002C53);
 final Color lightGray = Color(0xffEBEBEB);
+final Color green = Color(0xff009951);
 
 class HomeTab extends StatelessWidget {
   final double navHeight;
@@ -67,10 +68,10 @@ class HomeTab extends StatelessWidget {
                     spacing: 50,
                     runSpacing: 30,
                     children: <Widget>[
-                      DiretorioBox(title: 'Diretório 1', borderWidth: 5, borderColor: Colors.green),
-                      DiretorioBox(title: 'Diretório 2', borderWidth: 5, borderColor: Colors.green),
-                      DiretorioBox(title: 'Diretório 3', borderWidth: 5, borderColor: Colors.green),
-                      DiretorioBox(title: 'Diretório 4', borderWidth: 5, borderColor: Colors.green),
+                      DiretorioBox(title: 'Diretório 1', borderWidth: 5, borderColor: green),
+                      DiretorioBox(title: 'Diretório 2', borderWidth: 5, borderColor: green),
+                      DiretorioBox(title: 'Diretório 3', borderWidth: 5, borderColor: green),
+                      DiretorioBox(title: 'Diretório 4', borderWidth: 5, borderColor: green),
                     ],
                   ),
                 ],
