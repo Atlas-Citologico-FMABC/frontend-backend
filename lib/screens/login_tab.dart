@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:atlas_citologico_fmabc/main.dart';
 import '../widgets/button.dart';
 import '../widgets/input_field.dart';
 
@@ -8,7 +8,8 @@ final Color lightGray = Color(0xffEBEBEB);
 final Color green = Color(0xff009951);
 
 class LoginTab extends StatelessWidget {
-  const LoginTab({super.key});
+	final Function(TabType) onTap;
+  LoginTab({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +68,7 @@ class LoginTab extends StatelessWidget {
               padding: const EdgeInsets.all(60),
               child: Button(
                 text: 'Fazer Login',
-                onTap: () {},
+                onTap: () => onTap(TabType.admin),
                 foregroundColor: Colors.white,
                 backgroundColor: green,
                 fontSize: 30,
