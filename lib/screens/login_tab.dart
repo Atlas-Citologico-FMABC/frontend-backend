@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/button.dart';
 import '../widgets/input_field.dart';
 
 final Color darkBlue = Color(0xff002C53);
@@ -64,23 +65,12 @@ class LoginTab extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(60),
-              child: SizedBox(
-                width: 300,
-                height: 75,
-                child: TextButton(
-                  onPressed: () {},
-                  style: TextButton.styleFrom(
-                    backgroundColor: green,
-                    foregroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                  child: Text(
-                    'Fazer Login',
-                    style: TextStyle(color: Colors.white, fontSize: 30),
-                  ),
-                ),
+              child: Button(
+                text: 'Fazer Login',
+                onTap: () {},
+                foregroundColor: Colors.white,
+                backgroundColor: green,
+                fontSize: 30,
               ),
             ),
           ],
