@@ -35,7 +35,7 @@ PreferredSizeWidget NavBar({
             padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
             child: Button(
               text: 'Diretórios',
-              isSelected: selectedTab == TabType.diretorios,
+              isSelected: selectedTab == TabType.diretorios || selectedTab == TabType.diretorio,
               selectedBackgroundColor: gray,
               onTap: () => onTapTab(TabType.diretorios),
             ),
