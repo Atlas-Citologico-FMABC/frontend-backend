@@ -6,13 +6,13 @@ Widget InputField({
   double fontSize = 20,
   bool obscureText = false,
   String? labelText,
-	Color enabledBorderColor = Colors.black,
-	Color focusedBorderColor = Colors.blue,
-	double borderRadius = 8,
+  Color enabledBorderColor = Colors.black,
+  Color focusedBorderColor = Colors.blue,
+  double borderRadius = 8,
 }) {
   return SizedBox(
     width: width,
-    child: TextField(
+    child: TextFormField(
       style: TextStyle(fontSize: fontSize, height: height),
       obscureText: obscureText,
       decoration: InputDecoration(
@@ -28,6 +28,12 @@ Widget InputField({
         floatingLabelStyle: TextStyle(color: Colors.green),
         floatingLabelBehavior: FloatingLabelBehavior.never,
       ),
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return 'Input obrigatório';
+        }
+        return null;
+      },
     ),
   );
 }
