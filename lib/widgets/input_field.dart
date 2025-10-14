@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 Widget InputField({
+	required String errorText,
   double width = 400,
   double height = 2,
   double fontSize = 20,
@@ -30,7 +31,7 @@ Widget InputField({
       ),
       validator: (value) {
         if (value == null || value.isEmpty) {
-          return 'Input obrigatório';
+          return errorText;
         }
         return null;
       },

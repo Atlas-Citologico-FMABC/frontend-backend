@@ -44,6 +44,7 @@ class LoginTab extends StatelessWidget {
                     children: <Widget>[
                       Text('Email:', style: TextStyle(fontSize: 20)),
                       InputField(
+												errorText: 'Por favor, insira um endereço de email',
                         labelText: 'Email',
                         width: 500,
                         enabledBorderColor: Colors.black.withAlpha(50),
@@ -60,6 +61,7 @@ class LoginTab extends StatelessWidget {
                     children: <Widget>[
                       Text('Senha:', style: TextStyle(fontSize: 20)),
                       InputField(
+												errorText: 'Por favor, insira uma senha',
                         labelText: 'Senha',
                         width: 500,
                         obscureText: true,
