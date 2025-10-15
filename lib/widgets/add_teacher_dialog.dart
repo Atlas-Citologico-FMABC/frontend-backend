@@ -34,45 +34,51 @@ class _AddTeacherDialogState extends State<AddTeacherDialog> {
                       padding: const EdgeInsets.only(right: 10, left: 20),
                       child: Text('Nome'),
                     ),
-                    InputField(
-                      errorText: 'Digite um nome',
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.black.withAlpha(50),
+                    Expanded(
+                      child: InputField(
+                        errorText: 'Digite um nome',
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black.withAlpha(50),
+                          ),
                         ),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: darkBlue),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: darkBlue),
+                        ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 10, left: 20),
                       child: Text('Email'),
                     ),
-                    InputField(
-                      errorText: 'Digite um email',
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.black.withAlpha(50),
+                    Expanded(
+                      child: InputField(
+                        errorText: 'Digite um email',
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black.withAlpha(50),
+                          ),
                         ),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: darkBlue),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: darkBlue),
+                        ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 10, left: 20),
                       child: Text('Senha'),
                     ),
-                    InputField(
-                      errorText: 'Digite uma senha',
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.black.withAlpha(50),
+                    Expanded(
+                      child: InputField(
+                        errorText: 'Digite uma senha',
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black.withAlpha(50),
+                          ),
                         ),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: darkBlue),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: darkBlue),
+                        ),
                       ),
                     ),
                   ],
