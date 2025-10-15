@@ -44,11 +44,19 @@ class LoginTab extends StatelessWidget {
                     children: <Widget>[
                       Text('Email:', style: TextStyle(fontSize: 20)),
                       InputField(
-												errorText: 'Por favor, insira um endereço de email',
+                        errorText: 'Por favor, insira um endereço de email',
                         labelText: 'Email',
                         width: 500,
-                        enabledBorderColor: Colors.black.withAlpha(50),
-                        focusedBorderColor: darkBlue,
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black.withAlpha(50),
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: darkBlue),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
                       ),
                     ],
                   ),
@@ -61,12 +69,20 @@ class LoginTab extends StatelessWidget {
                     children: <Widget>[
                       Text('Senha:', style: TextStyle(fontSize: 20)),
                       InputField(
-												errorText: 'Por favor, insira uma senha',
+                        errorText: 'Por favor, insira uma senha',
                         labelText: 'Senha',
                         width: 500,
                         obscureText: true,
-                        enabledBorderColor: Colors.black.withAlpha(50),
-                        focusedBorderColor: darkBlue,
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black.withAlpha(50),
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: darkBlue),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
                       ),
                     ],
                   ),
