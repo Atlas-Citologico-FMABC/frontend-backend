@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'button.dart';
 import 'input_field.dart';
 
+final Color darkBlue = Color(0xff002C53);
 final Color green = Color(0xff009951);
 
 class AddTeacherDialog extends StatefulWidget {
@@ -33,17 +34,47 @@ class _AddTeacherDialogState extends State<AddTeacherDialog> {
                       padding: const EdgeInsets.only(right: 10, left: 20),
                       child: Text('Nome'),
                     ),
-                    InputField(errorText: 'Digite um nome'),
+                    InputField(
+                      errorText: 'Digite um nome',
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.black.withAlpha(50),
+                        ),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: darkBlue),
+                      ),
+                    ),
                     Padding(
                       padding: const EdgeInsets.only(right: 10, left: 20),
                       child: Text('Email'),
                     ),
-                    InputField(errorText: 'Digite um email'),
+                    InputField(
+                      errorText: 'Digite um email',
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.black.withAlpha(50),
+                        ),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: darkBlue),
+                      ),
+                    ),
                     Padding(
                       padding: const EdgeInsets.only(right: 10, left: 20),
                       child: Text('Senha'),
                     ),
-                    InputField(errorText: 'Digite uma senha'),
+                    InputField(
+                      errorText: 'Digite uma senha',
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.black.withAlpha(50),
+                        ),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: darkBlue),
+                      ),
+                    ),
                   ],
                 ),
                 SizedBox(height: 50),
