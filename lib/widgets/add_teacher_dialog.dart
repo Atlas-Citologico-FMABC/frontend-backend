@@ -13,6 +13,8 @@ class AddTeacherDialog extends StatefulWidget {
 }
 
 class _AddTeacherDialogState extends State<AddTeacherDialog> {
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Dialog(
@@ -24,6 +26,7 @@ class _AddTeacherDialogState extends State<AddTeacherDialog> {
         child: SizedBox(
           height: 200,
           child: Form(
+						key: _formKey,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -86,7 +89,12 @@ class _AddTeacherDialogState extends State<AddTeacherDialog> {
                 SizedBox(height: 50),
                 Button(
                   text: 'Adicionar professor',
-                  onTap: () {},
+                  onTap: () {
+                    if (_formKey.currentState!.validate()) {
+											print('ok');
+											Navigator.pop(context);
+                    }
+                  },
                   backgroundColor: green,
                   foregroundColor: Colors.white,
                   fontWeight: FontWeight.bold,
