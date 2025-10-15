@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../widgets/add_teacher_dialog.dart';
 import '../widgets/button.dart';
 
 final Color lightGray = Color(0xffEBEBEB);
@@ -90,16 +90,16 @@ class _AdminTabState extends State<AdminTab> {
                   ),
                   SizedBox(height: 10),
                   Container(
-										// width: 670,
-										height: 400,
+                    // width: 670,
+                    height: 400,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: SingleChildScrollView(
-											scrollDirection: Axis.horizontal,
+                      scrollDirection: Axis.horizontal,
                       child: SingleChildScrollView(
-												scrollDirection: Axis.vertical,
+                        scrollDirection: Axis.vertical,
                         child: DataTable(
                           dataRowMinHeight: 70,
                           dataRowMaxHeight: 70,
@@ -278,7 +278,11 @@ class _AdminTabState extends State<AdminTab> {
                   SizedBox(height: 40),
                   Button(
                     text: 'Adicionar Professor',
-                    onTap: () {},
+                    onTap: () => showDialog(
+                      context: context,
+                      barrierDismissible: true,
+                      builder: (context) => const AddTeacherDialog(),
+                    ),
                     backgroundColor: green,
                     foregroundColor: Colors.white,
                     horizontalPadding: 60,
