@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:atlas_citologico_fmabc/main.dart';
 import '../widgets/button.dart';
 import '../widgets/input_field.dart';
+import '../services/admin.dart';
 
 final Color darkBlue = Color(0xff002C53);
 final Color lightGray = Color(0xffEBEBEB);
@@ -93,7 +94,11 @@ class LoginTab extends StatelessWidget {
                     text: 'Fazer Login',
                     onTap: () {
                       if (_formKey.currentState!.validate()) {
-                        onTap(TabType.admin);
+                        AdminService().loginAdmin({
+                          'email_admin': '', 
+                          'senha': ''
+                          });
+                        // onTap(TabType.admin);
                       }
                     },
                     foregroundColor: Colors.white,
