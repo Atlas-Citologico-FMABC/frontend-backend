@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 Widget InputField({
+	String? initialValue,
   required String errorText,
   double width = 400,
   double height = 2,
@@ -14,6 +15,7 @@ Widget InputField({
   return SizedBox(
     width: width,
     child: TextFormField(
+			initialValue: initialValue,
       style: TextStyle(fontSize: fontSize, height: height),
       obscureText: obscureText,
       decoration: InputDecoration(
