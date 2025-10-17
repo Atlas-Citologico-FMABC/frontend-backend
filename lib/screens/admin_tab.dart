@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/add_teacher_dialog.dart';
 import '../widgets/button.dart';
+import '../widgets/edit_dialog.dart';
 
 final Color lightGray = Color(0xffEBEBEB);
 final Color green = Color(0xff009951);
@@ -129,7 +130,12 @@ class _AdminTabState extends State<AdminTab> {
                                     children: <Widget>[
                                       Button(
                                         text: 'Editar',
-                                        onTap: () {},
+                                        onTap: () => showDialog(
+                                          context: context,
+                                          barrierDismissible: true,
+                                          builder: (context) =>
+                                              const EditDialog(),
+                                        ),
                                         backgroundColor: lightGray,
                                         horizontalPadding: 20,
                                         verticalPadding: 15,
