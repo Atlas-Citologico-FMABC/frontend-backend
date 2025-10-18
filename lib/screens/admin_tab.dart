@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/add_teacher_dialog.dart';
 import '../widgets/button.dart';
 import '../widgets/edit_dialog.dart';
+import '../widgets/user_row.dart';
 
 final Color lightGray = Color(0xffEBEBEB);
 final Color green = Color(0xff009951);
@@ -121,160 +122,25 @@ class _AdminTabState extends State<AdminTab> {
                             ),
                           ],
                           rows: [
-                            DataRow(
-                              cells: [
-                                DataCell(Text('User1')),
-                                DataCell(Text('user1@email.com')),
-                                DataCell(
-                                  Row(
-                                    children: <Widget>[
-                                      Button(
-                                        text: 'Editar',
-                                        onTap: () => showDialog(
-                                          context: context,
-                                          barrierDismissible: true,
-                                          builder: (context) =>
-                                              const EditDialog(),
-                                        ),
-                                        backgroundColor: lightGray,
-                                        horizontalPadding: 20,
-                                        verticalPadding: 15,
-                                        fontSize: 20,
-                                      ),
-                                      SizedBox(width: 10),
-                                      Button(
-                                        text: 'Deletar',
-                                        onTap: () {},
-                                        backgroundColor: Colors.black,
-                                        foregroundColor: lightGray,
-                                        horizontalPadding: 20,
-                                        verticalPadding: 15,
-                                        fontSize: 20,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                            UserRow(
+                              nome: 'User1',
+                              email: 'user1@email.com',
+                              onEdit: () => showDialog(
+                                context: context,
+                                barrierDismissible: true,
+                                builder: (context) => const EditDialog(),
+                              ),
+															onDelete: () {},
                             ),
-                            DataRow(
-                              cells: [
-                                DataCell(Text('User2')),
-                                DataCell(Text('user2@email.com')),
-                                DataCell(
-                                  Row(
-                                    children: <Widget>[
-                                      Button(
-                                        text: 'Editar',
-                                        onTap: () {},
-                                        backgroundColor: lightGray,
-                                        horizontalPadding: 20,
-                                        verticalPadding: 15,
-                                        fontSize: 20,
-                                      ),
-                                      SizedBox(width: 10),
-                                      Button(
-                                        text: 'Deletar',
-                                        onTap: () {},
-                                        backgroundColor: Colors.black,
-                                        foregroundColor: lightGray,
-                                        horizontalPadding: 20,
-                                        verticalPadding: 15,
-                                        fontSize: 20,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                            DataRow(
-                              cells: [
-                                DataCell(Text('User3')),
-                                DataCell(Text('user3@email.com')),
-                                DataCell(
-                                  Row(
-                                    children: <Widget>[
-                                      Button(
-                                        text: 'Editar',
-                                        onTap: () {},
-                                        backgroundColor: lightGray,
-                                        horizontalPadding: 20,
-                                        verticalPadding: 15,
-                                        fontSize: 20,
-                                      ),
-                                      SizedBox(width: 10),
-                                      Button(
-                                        text: 'Deletar',
-                                        onTap: () {},
-                                        backgroundColor: Colors.black,
-                                        foregroundColor: lightGray,
-                                        horizontalPadding: 20,
-                                        verticalPadding: 15,
-                                        fontSize: 20,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                            DataRow(
-                              cells: [
-                                DataCell(Text('User4')),
-                                DataCell(Text('user4@email.com')),
-                                DataCell(
-                                  Row(
-                                    children: <Widget>[
-                                      Button(
-                                        text: 'Editar',
-                                        onTap: () {},
-                                        backgroundColor: lightGray,
-                                        horizontalPadding: 20,
-                                        verticalPadding: 15,
-                                        fontSize: 20,
-                                      ),
-                                      SizedBox(width: 10),
-                                      Button(
-                                        text: 'Deletar',
-                                        onTap: () {},
-                                        backgroundColor: Colors.black,
-                                        foregroundColor: lightGray,
-                                        horizontalPadding: 20,
-                                        verticalPadding: 15,
-                                        fontSize: 20,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                            DataRow(
-                              cells: [
-                                DataCell(Text('User5')),
-                                DataCell(Text('user5@email.com')),
-                                DataCell(
-                                  Row(
-                                    children: <Widget>[
-                                      Button(
-                                        text: 'Editar',
-                                        onTap: () {},
-                                        backgroundColor: lightGray,
-                                        horizontalPadding: 20,
-                                        verticalPadding: 15,
-                                        fontSize: 20,
-                                      ),
-                                      SizedBox(width: 10),
-                                      Button(
-                                        text: 'Deletar',
-                                        onTap: () {},
-                                        backgroundColor: Colors.black,
-                                        foregroundColor: lightGray,
-                                        horizontalPadding: 20,
-                                        verticalPadding: 15,
-                                        fontSize: 20,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                            UserRow(
+                              nome: 'User2',
+                              email: 'user2@email.com',
+                              onEdit: () => showDialog(
+                                context: context,
+                                barrierDismissible: true,
+                                builder: (context) => const EditDialog(),
+                              ),
+															onDelete: () {},
                             ),
                           ],
                         ),
