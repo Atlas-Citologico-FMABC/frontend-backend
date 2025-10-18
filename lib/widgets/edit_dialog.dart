@@ -14,6 +14,8 @@ class EditDialog extends StatefulWidget {
 
 class _EditDialogState extends State<EditDialog> {
   final _formKey = GlobalKey<FormState>();
+	final TextEditingController nomeController = TextEditingController(text: 'user1'); 
+	final TextEditingController senhaController = TextEditingController(text: 'senha1'); 
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +41,7 @@ class _EditDialogState extends State<EditDialog> {
                     ),
                     Expanded(
                       child: InputField(
-												initialValue: 'User1',
+												controller: nomeController,
                         errorText: 'Digite um novo nome',
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
@@ -57,7 +59,7 @@ class _EditDialogState extends State<EditDialog> {
                     ),
                     Expanded(
                       child: InputField(
-												initialValue: 'senhauser1',
+												controller: senhaController,
                         errorText: 'Digite uma nova senha',
 												// obscureText: true,
                         enabledBorder: UnderlineInputBorder(
@@ -77,6 +79,8 @@ class _EditDialogState extends State<EditDialog> {
                   text: 'Salvar',
                   onTap: () {
                     if (_formKey.currentState!.validate()) {
+											print(nomeController.text);
+											print(senhaController.text);
 											print('professor editado com sucesso');
 											Navigator.pop(context);
                     }
